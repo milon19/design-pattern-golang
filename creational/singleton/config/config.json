@@ -1,0 +1,5 @@
+{
+  "app_name": "A new app",
+  "max_connections": "10",
+  "log_level": "debug"
+}
