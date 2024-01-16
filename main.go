@@ -14,9 +14,9 @@ func main() {
 		fmt.Println("appName:", appName)
 	}
 
-	log := logger.GetLogger()
-	log.Info("This is an info message")
-	log.Debug("This is a debug message")
-	log.Error("This is an error message")
-	log.Critical("This is a critical message")
+	logging := logger.GetLogger()
+	logging.Info("This is an info message")
+	logging.Debug("This is a debug message")
+	logging.Error("This is an error message")
+	logging.Critical("This is a critical message")
 }
