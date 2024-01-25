@@ -1,6 +1,7 @@
 package main
 
 import (
+	"design-pattern/creational/builder/query"
 	"design-pattern/creational/singleton/config"
 	"design-pattern/creational/singleton/logger"
 	"fmt"
@@ -19,4 +20,15 @@ func main() {
 	logging.Debug("This is a debug message")
 	logging.Error("This is an error message")
 	logging.Critical("This is a critical message")
+
+	queryBuilder := query.NewSQLQueryBuilder()
+
+	q := queryBuilder.
+		Select("name, age").
+		From("users").
+		Where("age > 18").
+		Build()
+
+	fmt.Println("Constructed SQL Query:")
+	fmt.Println(q)
 }
